@@ -5,8 +5,8 @@
 
 int main(int, char**) {
 
-    std::vector<std::string> act = {"LRUCache","put","put","get","put","get","put","get","get","get"};
-    std::vector<std::vector<int>> td = {{2},{1,1},{2,2},{1},{3,3},{2},{4,4},{1},{3},{4}};
+    std::vector<std::string> act = {"LRUCache","put","get","put","get","get"};
+    std::vector<std::vector<int>> td = {{1},{2,1},{2},{3,2},{2},{3}};
     LRUCache* lRUCache = new LRUCache(td[0][0]);
 
     for (int i = 1; i < act.size(); i++)

@@ -5,22 +5,46 @@
 #include <unordered_map>
 #include <deque>
 
+struct lru_t
+{
+    int val;
+    lru_t* next;
+    lru_t* prev;
+
+    lru_t(int v) : val{v}, next{nullptr}, prev{nullptr} { }
+};
+
 class LRUCache {
     int m_capacity { 0 };
-    std::unordered_map<int, int> m_data;
-    std::deque<int> m_lru;
+    std::unordered_map<int, std::pair<int,lru_t*>> m_data;
+
+    lru_t* head;
+    lru_t* end;
 
     void updateLRU(int key)
     {
-        std::deque<int> tmp;
-        while (!m_lru.empty())
+        auto pos = m_data[key].second;
+
+        if (pos == end) return;
+
+        if (pos == head)
         {
-            if (m_lru.front() != key)
-                tmp.push_back(m_lru.front());
-            m_lru.pop_front();
+            auto tmp = head;
+            head = head->next;
+            head->prev = nullptr;
+            tmp->next = nullptr;
+            tmp->prev = end;
+            end->next = tmp;
+            end = tmp;
+            return;
         }
-        m_lru = tmp;
-        m_lru.push_back(key);
+
+        pos->prev->next = pos->next;
+        pos->next->prev = pos->prev;
+        pos->next = nullptr;
+        pos->prev = end;
+        end->next = pos;
+        end = pos;
     }
 
 public:
@@ -31,35 +55,52 @@ public:
         if (m_data.find(key) == m_data.end())
             return -1;
 
-        updateLRU(key);
-        m_lru.push_back(key);
+        if (m_data.size() > 1)
+            updateLRU(key);
 
-        return m_data[key];
+        return m_data[key].first;
     }
 
     void put(int key, int value)
     {
-        if (m_capacity == 0)
-            return;
+        if (m_capacity == 0) return;
 
         if (m_data.find(key) != m_data.end())
         {
             updateLRU(key);
-            m_data[key] = value;
+            m_data[key] = {value, end};
+            return;
+        }
+
+        if (m_data.size() == 0)
+        {
+            head = new lru_t(key);
+            end = head;
+            m_data[key] = {value, end};
             return;
         }
 
         if (m_data.size() < m_capacity)
         {
-            m_data[key] = value;
-            m_lru.push_back(key);
+            lru_t* tmp = new lru_t(key);
+            tmp->prev = end;
+            end->next = tmp;
+            end = tmp;
+            m_data[key] = {value, end};
             return;
         }
 
-        m_data.erase(m_lru.front());
-        m_lru.pop_front();
-        m_lru.push_back(key);
-        m_data[key] = value;
+        lru_t* tmp = new lru_t(key);
+        tmp->prev = end;
+        end->next = tmp;
+        end = tmp;
+
+        auto todel = head;
+        head = head->next;
+        head->prev = nullptr;
+        m_data.erase(todel->val);
+        delete todel;
+        m_data[key] = {value, end};
     }
 };
 
