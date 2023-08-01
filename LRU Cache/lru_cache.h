@@ -10,22 +10,16 @@ class LRUCache {
     std::unordered_map<int, int> m_data;
     std::deque<int> m_lru;
 
-    void printcache()
-    {
-        for (auto & [k, v] : m_data)
-        {
-            std::cout << k << "," << v << "; ";
-        }
-        std::cout << "\t| ";
-        for (auto & el : m_lru)
-            std::cout << el << ",";
-        std::cout << std::endl;
-    }
-
     void updateLRU(int key)
     {
-        if (m_lru.size() == m_capacity)
+        std::deque<int> tmp;
+        while (!m_lru.empty())
+        {
+            if (m_lru.front() != key)
+                tmp.push_back(m_lru.front());
             m_lru.pop_front();
+        }
+        m_lru = tmp;
         m_lru.push_back(key);
     }
 
@@ -37,14 +31,7 @@ public:
         if (m_data.find(key) == m_data.end())
             return -1;
 
-        std::deque<int> tmp;
-        while (!m_lru.empty())
-        {
-            if (m_lru.front() != key)
-                tmp.push_back(m_lru.front());
-            m_lru.pop_front();
-        }
-        m_lru = tmp;
+        updateLRU(key);
         m_lru.push_back(key);
 
         return m_data[key];
@@ -57,15 +44,7 @@ public:
 
         if (m_data.find(key) != m_data.end())
         {
-            std::deque<int> tmp;
-            while (!m_lru.empty())
-            {
-                if (m_lru.front() != key)
-                    tmp.push_back(m_lru.front());
-                m_lru.pop_front();
-            }
-            m_lru = tmp;
-            m_lru.push_back(key);
+            updateLRU(key);
             m_data[key] = value;
             return;
         }
