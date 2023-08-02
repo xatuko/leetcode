@@ -5,6 +5,7 @@ add_subdirectory("Find Eventual Safe States")
 add_subdirectory("LRU Cache")
 add_subdirectory("Roman to Integer")
 add_subdirectory("Move Zeroes")
+add_subdirectory("Sqrt(x)")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
