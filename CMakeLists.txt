@@ -6,6 +6,7 @@ add_subdirectory("LRU Cache")
 add_subdirectory("Roman to Integer")
 add_subdirectory("Move Zeroes")
 add_subdirectory("Sqrt(x)")
+add_subdirectory("Reverse Linked List")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
