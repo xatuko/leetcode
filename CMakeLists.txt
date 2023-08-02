@@ -9,6 +9,7 @@ add_subdirectory("Sqrt(x)")
 add_subdirectory("Reverse Linked List")
 add_subdirectory("Longest Common Prefix")
 add_subdirectory("Valid Parentheses")
+add_subdirectory("Merge Two Sorted Lists")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
