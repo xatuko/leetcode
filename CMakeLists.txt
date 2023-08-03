@@ -12,6 +12,7 @@ add_subdirectory("Valid Parentheses")
 add_subdirectory("Merge Two Sorted Lists")
 add_subdirectory("Remove Duplicates from Sorted Array")
 add_subdirectory("Find the Index of the First Occurrence in a String")
+add_subdirectory("Search Insert Position")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
