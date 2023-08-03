@@ -15,6 +15,7 @@ add_subdirectory("Find the Index of the First Occurrence in a String")
 add_subdirectory("Search Insert Position")
 add_subdirectory("Length of Last Word")
 add_subdirectory("Best Time to Buy and Sell Stock")
+add_subdirectory("Pow(x, n)")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
