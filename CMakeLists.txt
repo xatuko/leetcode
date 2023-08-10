@@ -17,6 +17,7 @@ add_subdirectory("Length of Last Word")
 add_subdirectory("Best Time to Buy and Sell Stock")
 add_subdirectory("Pow(x, n)")
 add_subdirectory("Plus One")
+add_subdirectory("Add Binary")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
