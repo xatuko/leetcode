@@ -23,6 +23,7 @@ add_subdirectory("Remove Duplicates from Sorted List")
 add_subdirectory("Binary Tree Inorder Traversal")
 add_subdirectory("Same Tree")
 add_subdirectory("Symmetric Tree")
+add_subdirectory("Maximum Depth of Binary Tree")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
