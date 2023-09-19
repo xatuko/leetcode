@@ -4,6 +4,5 @@
 int main(int,char**)
 {
     Solution s;
-    cout << boolalpha << s.isValid("([)]") << endl;
     return 0;
 }
