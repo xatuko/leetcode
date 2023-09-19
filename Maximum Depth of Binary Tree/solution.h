@@ -1,6 +1,8 @@
 #ifndef SOLUTION_H
 #define SOLUTION_H
 
+#include <algorithm>
+
 using namespace std;
 
 // Definition for a binary tree node.
