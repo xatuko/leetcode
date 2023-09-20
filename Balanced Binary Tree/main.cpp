@@ -3,7 +3,5 @@
 
 int main(int,char**)
 {
-    Solution s;
-
     return 0;
 }
