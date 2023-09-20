@@ -25,6 +25,7 @@ add_subdirectory("Same Tree")
 add_subdirectory("Symmetric Tree")
 add_subdirectory("Maximum Depth of Binary Tree")
 add_subdirectory("Convert Sorted Array to Binary Search Tree")
+add_subdirectory("Balanced Binary Tree")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
