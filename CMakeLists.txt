@@ -30,6 +30,7 @@ add_subdirectory("Minimum Depth of Binary Tree")
 add_subdirectory("Path Sum")
 add_subdirectory("Pascal's Triangle")
 add_subdirectory("Pascal's Triangle II")
+add_subdirectory("Valid Palindrome")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
