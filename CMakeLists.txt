@@ -32,6 +32,7 @@ add_subdirectory("Pascal's Triangle")
 add_subdirectory("Pascal's Triangle II")
 add_subdirectory("Valid Palindrome")
 add_subdirectory("Single Number")
+add_subdirectory("Linked List Cycle")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
