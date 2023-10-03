@@ -36,6 +36,7 @@ add_subdirectory("Linked List Cycle")
 add_subdirectory("Binary Tree Preorder Traversal")
 add_subdirectory("Binary Tree Postorder Traversal")
 add_subdirectory("Intersection of Two Linked Lists")
+add_subdirectory("Excel Sheet Column Title")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
