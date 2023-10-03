@@ -38,6 +38,7 @@ add_subdirectory("Binary Tree Postorder Traversal")
 add_subdirectory("Intersection of Two Linked Lists")
 add_subdirectory("Excel Sheet Column Title")
 add_subdirectory("Majority Element")
+add_subdirectory("Excel Sheet Column Number")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
