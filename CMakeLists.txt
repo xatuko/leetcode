@@ -40,6 +40,7 @@ add_subdirectory("Excel Sheet Column Title")
 add_subdirectory("Majority Element")
 add_subdirectory("Excel Sheet Column Number")
 add_subdirectory("Number of Good Pairs")
+add_subdirectory("Design HashMap")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
