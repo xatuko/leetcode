@@ -43,6 +43,7 @@ add_subdirectory("Number of Good Pairs")
 add_subdirectory("Design HashMap")
 add_subdirectory("Reverse Bits")
 add_subdirectory("Number of 1 Bits")
+add_subdirectory("Happy Number")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
