@@ -47,6 +47,7 @@ add_subdirectory("Happy Number")
 add_subdirectory("Remove Linked List Elements")
 add_subdirectory("Integer Break")
 add_subdirectory("Container With Most Water")
+add_subdirectory("Integer to Roman")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
