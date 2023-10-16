@@ -49,6 +49,7 @@ add_subdirectory("Integer Break")
 add_subdirectory("Container With Most Water")
 add_subdirectory("Integer to Roman")
 add_subdirectory("Find First and Last Position of Element in Sorted Array")
+add_subdirectory("3Sum")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
