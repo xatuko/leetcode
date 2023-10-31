@@ -4,32 +4,32 @@
 #include <vector>
 #include <unordered_map>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
 class Solution {
 public:
 	int numFactoredBinaryTrees(vector<int>& arr) {
-		sort(arr.begin(), arr.end(), [](int&a, int&b) { return b < a; });
-		unordered_map<int,int> heads;
-		int res = 0;
-		for (int i = 0; i < arr.size(); i++)
+		sort(arr.begin(), arr.end());
+		unordered_map<int,long> fmap;
+		int result = 0;
+
+		for (int & a : arr)
 		{
-			heads[arr[i]] = 1;
-			for (int j = i; j < arr.size(); j++)
+			long ways = 1;
+			double lim = sqrt(a);
+			for (int i = 0, fA = arr[0]; fA <= lim; fA = arr[++i])
 			{
-				int prod = arr[i]*arr[j];
-				if (heads.find(prod) == heads.end())
-					continue;
-
-				heads[prod] += (arr[i] == arr[j]) ? 1 : 2;
+				if (a % fA != 0) continue;
+				int fB = a / fA;
+				if (fmap.find(fB) != fmap.end())
+					ways += fmap[fA] * fmap[fB] * (fA == fB ? 1 : 2);
 			}
+			fmap[a] = ways;
+			result = (result + ways) % 1000000007;
 		}
-
-		int total = 0;
-		for (auto & [k,cnt] : heads)
-			total += cnt;
-		return total;
+		return result;
 	}
 };
 
