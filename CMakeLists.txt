@@ -53,6 +53,7 @@ add_subdirectory("3Sum")
 add_subdirectory("Backspace String Compare")
 add_subdirectory("Binary Trees With Factors")
 add_subdirectory("Find The Original Array of Prefix Xor")
+add_subdirectory("3Sum Closest")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
