@@ -56,6 +56,7 @@ add_subdirectory("Find The Original Array of Prefix Xor")
 add_subdirectory("3Sum Closest")
 add_subdirectory("Letter Combinations of a Phone Number")
 add_subdirectory("4Sum")
+add_subdirectory("Remove Nth Node From End of List")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
