@@ -58,6 +58,7 @@ add_subdirectory("Letter Combinations of a Phone Number")
 add_subdirectory("4Sum")
 add_subdirectory("Remove Nth Node From End of List")
 add_subdirectory("Count Nodes Equal to Average of Subtree")
+add_subdirectory("Word Search")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
