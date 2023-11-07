@@ -59,6 +59,7 @@ add_subdirectory("4Sum")
 add_subdirectory("Remove Nth Node From End of List")
 add_subdirectory("Count Nodes Equal to Average of Subtree")
 add_subdirectory("Word Search")
+add_subdirectory("Eliminate Maximum Number of Monsters")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
