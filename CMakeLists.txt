@@ -63,6 +63,7 @@ add_subdirectory("Eliminate Maximum Number of Monsters")
 add_subdirectory("Determine if a Cell Is Reachable at a Given Time")
 add_subdirectory("Count Number of Homogenous Substrings")
 add_subdirectory("Find Unique Binary String")
+add_subdirectory("Generate Parentheses")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
