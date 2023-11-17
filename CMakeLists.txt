@@ -65,6 +65,7 @@ add_subdirectory("Count Number of Homogenous Substrings")
 add_subdirectory("Find Unique Binary String")
 add_subdirectory("Generate Parentheses")
 add_subdirectory("Minimize Maximum Pair Sum in Array")
+add_subdirectory("Swap Nodes in Pairs")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
