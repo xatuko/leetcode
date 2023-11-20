@@ -66,6 +66,7 @@ add_subdirectory("Find Unique Binary String")
 add_subdirectory("Generate Parentheses")
 add_subdirectory("Minimize Maximum Pair Sum in Array")
 add_subdirectory("Swap Nodes in Pairs")
+add_subdirectory("Minimum Amount of Time to Collect Garbage")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
