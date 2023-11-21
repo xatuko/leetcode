@@ -68,6 +68,7 @@ add_subdirectory("Minimize Maximum Pair Sum in Array")
 add_subdirectory("Swap Nodes in Pairs")
 add_subdirectory("Minimum Amount of Time to Collect Garbage")
 add_subdirectory("Divide Two Integers")
+add_subdirectory("Count Nice Pairs in an Array")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
