@@ -69,6 +69,7 @@ add_subdirectory("Swap Nodes in Pairs")
 add_subdirectory("Minimum Amount of Time to Collect Garbage")
 add_subdirectory("Divide Two Integers")
 add_subdirectory("Count Nice Pairs in an Array")
+add_subdirectory("Diagonal Traverse II")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
