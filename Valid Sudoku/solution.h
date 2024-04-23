@@ -16,26 +16,21 @@ public:
 		for (int i = 0; i < board.size(); i++) {
 			for (int j = 0; j < board.size(); j++) {
 				char key = board[i][j];
+				int sub_box = (i / 3) * 3 + (j / 3);
 				if (key == '.') continue;
 
 				if (table.find(key) == table.end()) {
-					table.emplace(key, std::vector<std::set<int>>(3));
-					table[key][0].insert(i);
-					table[key][1].insert(j);
-					table[key][2].insert((i/3)*3+(j/3));
+					table.emplace(key, std::vector<std::set<int>>{ {i}, { j }, { sub_box } });
 				}
 				else {
-					if (table[key][0].find(i) != table[key][0].end())
+					if (table[key][0].find(i) != table[key][0].end() ||
+						table[key][1].find(j) != table[key][1].end() ||
+						table[key][2].find(sub_box) != table[key][2].end())
 						return false;
-					else table[key][0].insert(i);
 
-					if (table[key][1].find(j) != table[key][1].end())
-						return false;
-					else table[key][1].insert(j);
-
-					if (table[key][2].find((i/3)*3+(j/3)) != table[key][2].end())
-						return false;
-					else table[key][2].insert((i / 3)*3 + (j / 3));
+					table[key][0].insert(i);
+					table[key][1].insert(j);
+					table[key][2].insert(sub_box);
 				}
 			}
 		}
