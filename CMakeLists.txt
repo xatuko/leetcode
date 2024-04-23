@@ -71,6 +71,7 @@ add_subdirectory("Divide Two Integers")
 add_subdirectory("Count Nice Pairs in an Array")
 add_subdirectory("Diagonal Traverse II")
 add_subdirectory("Search in Rotated Sorted Array")
+add_subdirectory("Valid Sudoku")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
