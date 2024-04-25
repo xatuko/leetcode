@@ -74,6 +74,7 @@ add_subdirectory("Search in Rotated Sorted Array")
 add_subdirectory("Valid Sudoku")
 add_subdirectory("Combination Sum")
 add_subdirectory("Combination Sum II")
+add_subdirectory("Multiply Strings")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
