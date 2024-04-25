@@ -75,6 +75,7 @@ add_subdirectory("Valid Sudoku")
 add_subdirectory("Combination Sum")
 add_subdirectory("Combination Sum II")
 add_subdirectory("Multiply Strings")
+add_subdirectory("Jump Game II")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
