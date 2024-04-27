@@ -34,6 +34,22 @@ public:
 
 		return steps;
 	}
+
+	// O(N)
+	// int jump(vector<int>& nums) {
+	// 	int steps = 0, cur = -1, next = 0;
+
+	// 	for (int i = 0; next < nums.size()-1; i++) {
+	// 		if (i > cur) {
+	// 			steps++;
+	// 			cur = next;
+	// 		}
+
+	// 		next = max(next, nums[i]+i);
+	// 	}
+
+	// 	return steps;
+	// }
 };
 
 #endif // SOLUTION_H
