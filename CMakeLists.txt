@@ -76,6 +76,8 @@ add_subdirectory("Combination Sum")
 add_subdirectory("Combination Sum II")
 add_subdirectory("Multiply Strings")
 add_subdirectory("Jump Game II")
+add_subdirectory("Permutations")
+add_subdirectory("Permutations II")
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
